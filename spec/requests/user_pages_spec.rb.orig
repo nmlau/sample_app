@@ -23,6 +23,15 @@ describe "signup" do
         expect { click_button submit }.not_to change(User, :count)
       end
       describe "after submission" do
+<<<<<<< HEAD
+      	before do
+      	  fill_in "Name",         with: ""
+      	  fill_in "Email",        with: ""
+          fill_in "Password",     with: ""
+          fill_in "Confirmation", with: ""
+      	  click_button submit
+      	end
+=======
         before do
           fill_in "Name",         with: ""
           fill_in "Email",        with: ""
@@ -30,6 +39,7 @@ describe "signup" do
           fill_in "Confirmation", with: ""
           click_button submit
         end
+>>>>>>> sign-in-out
 
         it { should have_title('Sign up') }
         it { should have_content('error') }
@@ -52,18 +62,28 @@ describe "signup" do
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
+<<<<<<< HEAD
+
+=======
+>>>>>>> sign-in-out
       describe "after saving the user" do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
 
+<<<<<<< HEAD
+        it { should have_title(user.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+      end
+=======
         it { should have_link('Sign out') }
         it { should have_title(user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
-        describe "followed by signout" do
-          before { click_link "Sign out" }
-          it { should have_link('Sign in') }
-        end
       end
+      describe "followed by signout" do
+        before { click_link "Sign out" }
+        it { should have_link('Sign in') }
+      end
+>>>>>>> sign-in-out
     end
   end
 end
