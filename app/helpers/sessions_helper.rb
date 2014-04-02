@@ -33,6 +33,7 @@ module SessionsHelper
     current_user.update_attribute(:remember_token,
                                   User.hash(User.new_remember_token))
     cookies.delete(:remember_token)
+    session.delete(:return_to)
     self.current_user = nil
   end
 
