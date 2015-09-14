@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0-p643'
+ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.4'
@@ -11,8 +11,8 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
 #extension to sample_app
-gem 'pry', '0.9.12.6'
-gem 'pry-debugger', '0.2.2'
+# gem 'pry', '0.9.12.6'
+# gem 'pry-debugger', '0.2.2'
 gem 'cloudinary', '1.0.70'
 gem 'newrelic_rpm', '3.7.3.204'
 
